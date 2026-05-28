@@ -6,23 +6,17 @@ So basically I hate myself(that's well.. a given)
 
 I sat down, did everything from "first principles" (yeah i'm very cool like that.)
 
-it's all calculus. anyway. I have reached the shittier cousin of backpropogation with some intuition and some nudges, and a lot of stupid implementations.
+So this implements backprop, although my way of doing backprop is very noisy and very un-real-life-smart-stuff
 
-Yeah I know Calculus but I forgot it existed for a while.
+Hmm I will probably read up on some more formal introductions and intuitions before i make a v4.
 
-v3 is probably backpropogation with calculus, after i read some formal writeups on it.
 
-Was fun though.
+## Versions
+- `/primitive` is me doing things with a vague idea of what a neuron is, and how signals are actually propogated. It's what I had an intuition for.
 
-### What can these dumb neurons do?
-- AND/OR/NAND/XOR etc
-- 3 bit parity (6/8)
-- 4 bit parity(maybe)
+- `v3` is after I went through `https://www.youtube.com/watch?v=IHZwWFHWa-w&t=1004s` to get an intuition for what gradient descent would help me with.
 
-Anyway, the thing I "intuition'd" is called `Heuristics` apparently. ok i guess.
+- `v4`(soon) will be after I read a bit more formal things because my signal propogation, the weight initialization are probably not the best way to do things. I realised I update a neuron everytime it's called from a child, but the gradients should accumulate to show the "net effect I have on the child neurons dependant on me" to the neuron, and to make it figure itself out
 
-Pretty shit, but hey my neuron *does* think.
-
-And it can talk to the neurons around it, albeit in a very bad manner.
-
-(Yeah my signal dies like 3 layers into propogation)
+# End Goal?
+I'd like to implement a 10 bit parity with only `math` and `random` libraries
